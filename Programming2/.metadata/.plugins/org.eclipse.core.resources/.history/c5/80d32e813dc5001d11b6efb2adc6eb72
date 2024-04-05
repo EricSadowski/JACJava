@@ -1,0 +1,158 @@
+import java.util.Scanner;
+
+public class MySavings {
+
+	/*
+	 * int penny; int nickel; int dime; int quarter;
+	 * 
+	 */
+	
+	
+	public static void main(String[] args) {
+		
+		PiggyBank pig = new PiggyBank(0, 0, 0, 0, 0);
+		Scanner input = new Scanner(System.in);
+		System.out.println("1. Show total in bank.");
+		System.out.println("2. Add a penny.");
+		System.out.println("3. Add a nickel.");
+		System.out.println("4. Add a dime.");
+		System.out.println("5. Add a quarter.");
+		System.out.println("6. Take money out of bank.");
+		System.out.println("Enter 0 to quit");
+		
+		
+		//double total = pig.penny + (pig.nickel * 5) + (pig.dime * 10) + (pig.quarter * 25);
+		
+		
+		int ch;
+		
+		do {
+            System.out.println("Enter your choice: ");  
+            ch = input.nextInt();
+            switch (ch) {
+            
+            case 1:
+            	System.out.printf("%.2f$%n", pig.getTotal());
+            	break;
+            case 2:
+            	pig.setPenny(pig.getPenny()+ 1);
+            	pig.setTotal(pig.getTotal() + 0.01);
+            	break;
+            case 3:
+            	pig.setNickel(pig.getNickel()+ 1);
+            	pig.setTotal(pig.getTotal() + 0.05);
+            	break;
+            case 4:
+            	pig.setDime(pig.getDime()+ 1);
+            	pig.setTotal(pig.getTotal() + 0.10);
+            	break;
+            case 5:
+            	pig.setQuarter(pig.getQuarter()+ 1);
+            	pig.setTotal(pig.getTotal() + 0.25);
+            	break;
+            case 6:
+				pig.setPenny(0);
+				pig.setNickel(0);
+				pig.setDime(0);
+				pig.setQuarter(0);
+				pig.setTotal(0);
+				System.out.println("Savings is now empty!");
+				break;
+            case 0:
+            	System.out.println("Goodbye!");
+            
+            
+            
+            
+            
+            
+            }
+			
+			
+		}while (ch != 0);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*		int i = input.nextInt();
+		
+		while(input.nextInt() != 0) {
+			if(i == 0) {
+				input.close();
+			} else if(i == 1) {
+			System.out.printf("%.2f$%n", total * 0.01);
+			}
+			else if(i == 2) {
+				penny++;
+			}else if(i == 3) {
+				nickel++;
+			}else if(i == 4) {
+				dime++;
+			}else if(i == 5) {
+				quarter++;
+			}else if (i == 6) {
+				penny = 0;
+				nickel = 0;
+				dime = 0;
+				quarter = 0;
+				System.out.println("Account is now empty!");
+			}
+			
+			
+		
+		
+		System.out.println("Goodbye!");
+	}*/
+		
+	}
+
+	
+	/*
+	
+	public int getPenny() {
+		return penny;
+	}
+
+
+	public void setPenny(int penny) {
+		this.penny = penny;
+	}
+
+
+	public int getNickel() {
+		return nickel;
+	}
+
+
+	public void setNickel(int nickel) {
+		this.nickel = nickel;
+	}
+
+
+	public int getDime() {
+		return dime;
+	}
+
+
+	public void setDime(int dime) {
+		this.dime = dime;
+	}
+
+
+	public int getQuarter() {
+		return quarter;
+	}
+
+
+	public void setQuarter(int quarter) {
+		this.quarter = quarter;
+	} */
+
+}

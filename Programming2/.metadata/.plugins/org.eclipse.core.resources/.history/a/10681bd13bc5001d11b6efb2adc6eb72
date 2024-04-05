@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class DiceRollGame {
+
+	public static void main(String[] args) {
+
+		DRPlayer user = new DRPlayer(1000);
+		Scanner input = new Scanner(System.in);
+		System.out.println("You have 1000 points");
+
+		int ch;
+		
+		 do {
+		  System.out.println("How many points do you want to risk? (-1 to quit) "); 
+		  ch = input.nextInt();
+		  int roll = user.roll();
+		  if(roll > 7) {
+			  int win = ch * 2;
+			  win += user.points;
+		  }else {
+			  user.points -= ch;
+		  }
+		  System.out.println("You rolled: " + roll);
+		  System.out.println("You now have " + user.points + " points.");
+		  
+		  
+		  
+		  }while (ch != -1 || user.points <= 0);
+		 
+		
+
+	}
+
+}

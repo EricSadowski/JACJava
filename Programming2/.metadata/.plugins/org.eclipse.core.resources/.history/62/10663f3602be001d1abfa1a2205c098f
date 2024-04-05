@@ -1,0 +1,41 @@
+// Eric Sadowski 2338165
+public class bottomRight {
+
+	public static void main(String[] args) {
+		
+
+		bottomRight(6);
+		
+	}
+	
+	
+	public static void bottomRight(int num) {
+		
+		for(int i = 0; i < num; i++) {
+			
+
+	
+			for(int x = (num + 1); x < num; x++) {
+				System.out.print("*");
+				
+				
+			}
+			
+			
+			System.out.println("*");
+			
+				
+}
+	
+		
+		
+	}
+	
+	
+
+}
+
+
+
+
+

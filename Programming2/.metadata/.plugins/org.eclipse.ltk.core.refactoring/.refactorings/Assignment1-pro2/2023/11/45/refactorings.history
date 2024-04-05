@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;GameOf21.java&apos; to &apos;Casino/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Assignment1-pro2&apos;&#x0D;&#x0A;- Destination element: &apos;Casino/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;GameOf21.java&apos;" description="Copy compilation unit" destination="=Casino/src&lt;" element1="/src&lt;{GameOf21.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1699641510065" units="1" version="1.0"/>
+</session>

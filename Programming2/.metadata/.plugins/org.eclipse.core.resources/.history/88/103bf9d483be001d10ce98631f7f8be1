@@ -1,0 +1,57 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class CharCounter {
+
+	public static void main(String[] args) {
+		
+		
+		String cowboy = "Yoda was a s\"'il///&!ly duck";
+		
+		//System.out.println(Array.toString(charCounter("do you #83713>3 !n Y()urselve$ ??")));
+	}
+	
+	
+	public static int[] charCounter(String input) {
+		int cons = 0;
+		int vowels = 0;
+		int symbols = 0;
+		int spaces = 0;
+			
+		input = input.toLowerCase();
+		
+		for (int i = 0; i < input.length(); i++){ 
+		    char check = input.charAt(i);
+		    if(check == ' ') {
+		    	spaces++;
+		    }
+		    if(check == '!' || check == '"' || check == '#' || check == '$' || check == '%' || 
+		    	check == '&' || check == '\'' || check == '(' || check == ')' || check == '*' ||
+		    	check == '+' || check == ',' || check == '-' || check == '.' || check == ':' ||
+		    	check == ';' || check == '<' || check == '=' || check == '>' || check == '?' || check == '/') {
+		    	symbols++;
+		    }
+		    
+		    
+		    if(check == 'a' || check == 'e' || check == 'i' || check == 'o' || check == 'u') {
+		    	vowels++;
+		    }else {
+		    	cons++;
+		    }
+		    
+		} 
+		
+		int[] finArr;
+		finArr = new int[4];
+		finArr[0] = cons;
+		finArr[1] = vowels;
+		finArr[2] = symbols;
+		finArr[3] = spaces;
+		
+		return finArr;
+		
+	}
+	
+	
+
+}

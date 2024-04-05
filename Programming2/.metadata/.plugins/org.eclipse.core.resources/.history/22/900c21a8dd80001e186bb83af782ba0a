@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class TwoSum {
+	
+	public int[] twoSum(int[] nums, int target) {
+		
+		int[] goal = new int[2];
+
+		for (int i : nums) {
+			int j = 1;
+			System.out.println(i);
+			
+			if((i + nums[i+j]) == target) {
+				goal[0] = i;
+				System.out.println(goal[0]);
+				goal[1] = nums[i+j];
+				System.out.println(goal[1]);
+				break;
+			}else {
+				j++;
+				continue;
+			}
+			
+			
+//			for(int j=0; j<nums.length; j++) {
+//				
+//			}
+		}
+		//System.out.println(goal);
+		return goal;
+		}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		TwoSum summer = new TwoSum();
+//		int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 };
+//		int target = 6;
+//		
+//		int[] result = summer.twoSum(intArray, target);
+//		System.out.println(result);
+//		
+		
+		
+		int[] test = new int[] {1,2,3,4,6,7};
+		int[] combo = new int[test.length-1];
+		List<Integer> temp = new ArrayList<>();
+		for (int num : test) {
+		    temp.add(num);
+		}
+
+		for (int j = 0;j<test.length;j++) {
+			
+	
+			for (int i=0;i<temp.size()-1;i++) {
+				int num = temp.get(0);
+				int next = temp.get(i+1);
+				int added = num + next;
+				combo[i] = added;
+			}
+			temp.remove(0);
+			
+
+			System.out.println(Arrays.toString(combo));
+ }
+			
+}
+}

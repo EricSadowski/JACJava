@@ -1,0 +1,35 @@
+
+public class DRPlayer {
+
+	int points;
+	int d1;
+	int d2;
+	
+	
+	
+	
+	public int roll() {
+		
+		d1 = (int) Math.floor(Math.random() * 6);
+		
+	}
+
+	public void risk(int choice) {
+		
+	}
+	
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	public DRPlayer(int points) {
+		
+		this.points = points;
+	}
+	
+	
+}

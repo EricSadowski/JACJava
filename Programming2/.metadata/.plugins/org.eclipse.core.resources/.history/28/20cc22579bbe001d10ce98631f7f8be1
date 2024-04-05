@@ -1,0 +1,87 @@
+import java.util.Arrays;
+public class withHonors {
+
+	public static void main(String[] args) {
+		
+		
+		//System.out.println(withHonors("AAFACBCBDBACDBBDCFABCBD"));
+		
+		String grade = "ABDDDDDDABDABDF";
+		int gradeL = grade.length();
+		String a = "A";
+		int found = 0;
+		
+		for(int i = 0; i < (gradeL - 7 + 1 ); i++) {
+			String subs = grade.substring(i,(i + 7));
+
+		  System.out.println(subs);
+		  if(subs.contains(a)) {
+			  System.out.println(true);
+		  }else {
+			  System.out.println(false);
+		  }
+		  
+		}
+		
+		
+		//System.out.println(gradeL);
+	}
+	
+	
+	public static boolean withHonors(String grade) {
+			
+		double numGrades = 0;
+		//double totalA = 0;
+		int totalF = 0;
+		String[] gradeArr = null;
+		gradeArr = grade.split("");
+		int matchA = 0;
+		int gradeL = grade.length();
+		/*for(int i=0; i < gradeArr.length; i++) {
+			numGrades++;
+		}*/
+		
+		for(int i = 0; i < (gradeL - 7); i++) {
+			String substring = grade.substring(i,(i + 7));
+			System.out.print(substring);
+		}
+		
+		
+		
+		/*
+		for(int i=0; i < gradeArr.length; i++) {
+			if(gradeArr[i].equals("A")) {
+				String blank = "";
+				for(int e = 0; e < 7; e++) {
+					blank += i;
+				}
+				System.out.print(blank);
+			}
+		}*/
+		
+		
+		
+		
+		for(int i=0; i < gradeArr.length; i++) {
+			if(gradeArr[i].equals("F")) {
+				totalF++;		
+			}
+		}
+		
+		//if((totalA/numGrades) < (1.0 / 7.0)) {
+			//return false;
+		
+		if(grade.contains("DDDD")) {
+			return false;
+		}
+		else if(totalF > 2) {
+			return false;
+		}else {
+			return true;
+		}
+		
+		
+		
+	}
+
+}

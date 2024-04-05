@@ -1,0 +1,64 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class CharCounter {
+
+	public static void main(String[] args) {
+		
+		
+		String cowboy = "taco bell!..";
+		
+		System.out.println(Arrays.toString(charCounter(cowboy)));
+	}
+	
+	
+	public static int[] charCounter(String input) {
+		int cons = 0;
+		int vowels = 0;
+		int symbols = 0;
+		int spaces = 0;
+			
+		input = input.toLowerCase();
+		
+		for (int i = 0; i < input.length(); i++){ 
+		    char check = input.charAt(i);
+		    if(check == ' ') {
+		    	spaces++;
+		    }
+		    if((check < 47 && check > 33) || (check < 63 && check > 58)) {
+		    	symbols++;
+		    }
+		    
+		    
+		    if(check == 'a' || check == 'e' || check == 'i' || check == 'o' || check == 'u') {
+		    	vowels++;
+		    }else if(Character.isLetter(check)) {
+		    	cons++;
+		    }
+		    
+		} 
+		
+		int[] finArr;
+		finArr = new int[4];
+		finArr[0] = cons;
+		finArr[1] = vowels;
+		finArr[2] = symbols;
+		finArr[3] = spaces;
+		
+		return finArr;
+		
+	}
+	
+	
+
+}
+
+
+
+
+/*check == '!' || check == '"' || check == '#' || check == '$' || check == '%' || 
+		    	check == '&' || check == '\'' || check == '(' || check == ')' || check == '*' ||
+		    	check == '+' || check == ',' || check == '-' || check == '.' || check == ':' ||
+		    	check == ';' || check == '<' || check == '=' || check == '>' || check == '?' || check == '/'*/
+
+
